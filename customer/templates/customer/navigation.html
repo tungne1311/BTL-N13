@@ -1,26 +1,37 @@
 {% load static %}
 
-<nav class="navbar navbar-expand-lg navbar-dark indigo">
-  <a class="navbar-brand d-flex align-items-center" href="{% url 'index' %}">
-    <img src="{% static 'images/logo.png' %}" alt="Deliver Logo" style="width: 40px; height: auto;" class="mr-3"> 
-    Kong Fuong Restaurant
-  </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="{% url 'about' %}">About Us</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="{% url 'menu' %}">Menu</a>
-      </li>
-    </ul>
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" href="{% url 'order' %}">Place an Order!</a>
-      </li>
-    </ul>
-  </div>
-</nav>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <title>Your Title</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark indigo">
+        <a class="navbar-brand d-flex align-items-center" href="{% url 'index' %}">
+            <img src="{% static 'images/logo.png' %}" alt="Deliver Logo" class="logo"> 
+            <span class="nav-title">Deliver</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link nav-item-custom" href="{% url 'about' %}">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-item-custom" href="{% url 'menu' %}">Menu</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link nav-item-custom" href="{% url 'order' %}">Place an Order!</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</body>
+</html>
